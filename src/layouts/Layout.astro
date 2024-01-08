@@ -16,36 +16,51 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="content-grid">
 		<slot />
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
+	body {
+		--padding-inline: 1rem;
+		--content-max-width: 1200px;
+		--breakout-max-width: 1400px;
+
+		--breakout-size: calc(
+			(var(--breakout-max-width) - var(--content-max-width)) / 2
 		);
+
+		display: grid;
+		padding-bottom: 4rem;
+
+		grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr)
+    [breakout-start] minmax(0, var(--breakout-size))
+    [content-start] min(
+      100% - (var(--padding-inline) * 2),
+			var(--content-max-width) / 2
+    )
+		[content-center] min(
+      100% - (var(--padding-inline) * 2),
+			var(--content-max-width) / 2
+    )
+    [content-end]
+    minmax(0, var(--breakout-size)) [breakout-end]
+    minmax(var(--padding-inline), 1fr) [full-width-end];
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+
+	.content {
+		grid-column: content;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	.breakout {
+		grid-column: breakout;
+	}
+
+	.full-width {
+		grid-column: full-width;
+
+		display: grid;
+		grid-template-columns: inherit;
 	}
 </style>
