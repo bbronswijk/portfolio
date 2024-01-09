@@ -20,6 +20,7 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
+
 <style is:global>
 	body {
 		--padding-inline: 1rem;
@@ -37,11 +38,11 @@ const { title } = Astro.props;
     [full-width-start] minmax(var(--padding-inline), 1fr)
     [breakout-start] minmax(0, var(--breakout-size))
     [content-start] min(
-      100% - (var(--padding-inline) * 2),
+      50% - (var(--padding-inline) * 2),
 			var(--content-max-width) / 2
     )
 		[content-center] min(
-      100% - (var(--padding-inline) * 2),
+      50% - (var(--padding-inline) * 2),
 			var(--content-max-width) / 2
     )
     [content-end]

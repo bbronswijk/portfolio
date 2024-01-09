@@ -1,7 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
-import ProfileImage from '../images/profile.jpg';
+import ProfileImage from '../images/profile.webp';
+import ProfileMobileImage from '../images/profile-mobile.webp';
 import VanderlandeImage from '../images/vanderlande.png';
 import HoogendoornImage from '../images/hoogendoorn.png';
 import LyceoImage from '../images/lyceo.png';
@@ -17,20 +18,26 @@ import jestImage from '../images/jest.png';
 // import angularImage from '../images/angular.png';
 ---
 
-<Layout title="Welcome to Astro.">
-	<header class="intro flex flex-col align-start justify-center h-full col-start-3 col-span-1">
-		<span class="text-5xl -ml-1">Hi, I am,</span>
-		<p class="text-9xl font-bold -ml-2">Bram</p>
-		<p>
-			A full-stack developer with a passion for UI design<br/>
+<Layout title="Bram Bronswijk | Portfolio">
+	<picture class="order-none md:order-1 mt-4 md:mt-0 col-start-3 md:col-start-4 col-span-2 md:col-span-3 md:min-h-[540px] object-fill flex justify-center">
+		<source media="(min-width:768px)" srcset={ProfileImage.src}/>
+		<img class="rounded-full md:rounded-none h-60 w-60 md:h-auto md:w-auto object-cover object-left md:h-full"
+				 src={ProfileMobileImage.src}
+				 alt="Profile picture of Bram Bronswijk"
+				 loading="eager"/>
+	</picture>
+
+	<header class="order-1 md:order-none flex flex-col align-start justify-center h-full col-start-3 col-span-2 md:col-start-3 md:col-span-1 py-4">
+		<span class="text-3xl md:text-5xl -ml-1">Hi, I am,</span>
+		<p class="text-6xl md:text-9xl font-bold -ml-2">Bram</p>
+		<p class="max-w-96">
+			A full-stack developer with a passion for UI design
 			and frontend development.
 		</p>
-		<button class="px-4 bg-neutral-950 text-white rounded-sm border-none outline-none py-2 font-bold self-start mt-8">My resume</button>
+		<button class="px-4 bg-neutral-950 text-white rounded-sm border-none outline-none py-2 font-bold self-start my-4 md:my-8">My resume</button>
 	</header>
 
-	<Image src={ProfileImage} class="col-start-4 col-span-3" alt="Profile picture of Bram B<ronswijk" />
-
-	<section class="bg-blue-50 rounded-xl flex font-bold h-28 py-8 w-2/3 justify-around -mt-12 relative content">
+	<section class="order-2 bg-blue-50 rounded-xl flex flex-col gap-y-4 md:flex-row font-bold md:h-28 p-8 w-full md:w-2/3 justify-around md:-mt-12 relative content">
 		<div class="flex gap-2">
 			<div class="text-5xl">4</div>
 			<div class="text-2xl leading-6">NPM<br/>Packages</div>
@@ -45,8 +52,8 @@ import jestImage from '../images/jest.png';
 		</div>
 	</section>
 
-	<main class="content grid gap-y-14 py-14">
-		<section class="flex justify-around mb-12">
+	<main class="order-3 content grid gap-y-14 py-14">
+		<section class="flex justify-around mb-12 flex-col md:flex-row gap-y-6 items-center">
 			<Image src={VanderlandeImage} class="grayscale object-contain opacity-50" height="30px" alt="Logo vanderlande" />
 			<Image src={HoogendoornImage} class="grayscale object-contain opacity-50" height="30px" alt="Logo Hoogendoorn" />
 			<Image src={LyceoImage} class="grayscale object-contain opacity-50" height="30px" alt="Logo Lyceo" />
@@ -55,7 +62,7 @@ import jestImage from '../images/jest.png';
 
 		<h2 class="text-5xl font-bold text-center">Work experience</h2>
 
-		<section class="grid grid-cols-2 mb-12">
+		<section class="grid md:grid-cols-2 mb-12">
 			<div class="">
 				<!--<div class="bg-white rounded-full p-2">-->
 				<!--	<Image src={ionicImage} alt="Ionic" height="40px"/>-->
@@ -67,7 +74,7 @@ import jestImage from '../images/jest.png';
 				<!--	<Image src={angularImage} alt="Angular" height="40px"/>-->
 				<!--</div>-->
 			</div>
-			<ul class="list-none ">
+			<ul class="list-none">
 				<li class="grid grid-cols-experience mb-8">
 					<small class="text-gray-500">March 2022 - current</small>
 					<h3 class="text-xl font-bold">Vanderlande</h3>
@@ -118,7 +125,7 @@ import jestImage from '../images/jest.png';
 
 		<h2 class="text-5xl font-bold text-center">Highlighted side projects</h2>
 
-		<section class="grid grid-cols-3 gap-6">
+		<section class="grid md:grid-cols-3 gap-6">
 			<article class="bg-blue-50 rounded-xl p-10 flex flex-col gap-6">
 				<h3 class="text-xl font-bold">TrackingTime Dashboard</h3>
 				<p class="flex-1 text-sm">
