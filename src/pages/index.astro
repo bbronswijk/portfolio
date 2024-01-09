@@ -1,196 +1,28 @@
 ---
-import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
-import ProfileImage from '../images/profile.webp';
-import ProfileMobileImage from '../images/profile-mobile.webp';
-import VanderlandeImage from '../images/vanderlande.png';
-import HoogendoornImage from '../images/hoogendoorn.png';
-import LyceoImage from '../images/lyceo.png';
-import RTLXLImage from '../images/rtlxl.png';
-import laravelImage from '../images/laravel.png';
-import ionicImage from '../images/ionic.png';
-import nextJsImage from '../images/next-js.svg';
-import prismaImage from '../images/prisma.png';
-import postgresImage from '../images/postgresql.png';
-import playwrightImage from '../images/playwright.png';
-import trpcImage from '../images/trpc.svg';
-import jestImage from '../images/jest.png';
-// import angularImage from '../images/angular.png';
+import SideProjects from '../components/SideProjects.astro';
+import Header from '../components/Header.astro';
+import WorkExperience from '../components/WorkExperience.astro';
+import Clients from '../components/Clients.astro';
 ---
 
 <Layout title="Bram Bronswijk | Portfolio">
-	<picture class="order-none md:order-1 mt-4 md:mt-0 col-start-3 md:col-start-4 col-span-2 md:col-span-3 md:min-h-[540px] object-fill flex justify-center">
-		<source media="(min-width:768px)" srcset={ProfileImage.src}/>
-		<img class="rounded-full md:rounded-none h-60 w-60 md:h-auto md:w-auto object-cover object-left md:h-full"
-				 src={ProfileMobileImage.src}
-				 alt="Profile picture of Bram Bronswijk"
-				 loading="eager"/>
-	</picture>
-
-	<header class="order-1 md:order-none flex flex-col align-start justify-center h-full col-start-3 col-span-2 md:col-start-3 md:col-span-1 py-4">
-		<span class="text-3xl md:text-5xl -ml-1">Hi, I am,</span>
-		<p class="text-6xl md:text-9xl font-bold -ml-2">Bram</p>
-		<p class="max-w-96">
-			A full-stack developer with a passion for UI design
-			and frontend development.
-		</p>
-		<button class="px-4 bg-neutral-950 text-white rounded-sm border-none outline-none py-2 font-bold self-start my-4 md:my-8">My resume</button>
-	</header>
-
-	<section class="order-2 bg-blue-50 rounded-xl flex flex-col gap-y-4 md:flex-row font-bold md:h-28 p-8 w-full md:w-2/3 justify-around md:-mt-12 relative content">
-		<div class="flex gap-2">
-			<div class="text-5xl">4</div>
-			<div class="text-2xl leading-6">NPM<br/>Packages</div>
-		</div>
-		<div class="flex gap-2">
-			<div class="text-5xl">30</div>
-			<div class="text-2xl leading-6">Side<br/>projects</div>
-		</div>
-		<div class="flex gap-2">
-			<div class="text-5xl">29</div>
-			<div class="text-2xl leading-6">Worked with<br/>companies</div>
-		</div>
-	</section>
+	<Header/>
 
 	<main class="order-3 content grid gap-y-14 py-14">
 		<section class="flex justify-around mb-12 flex-col md:flex-row gap-y-6 items-center">
-			<Image src={VanderlandeImage} class="grayscale object-contain opacity-50" height="30px" alt="Logo vanderlande" />
-			<Image src={HoogendoornImage} class="grayscale object-contain opacity-50" height="30px" alt="Logo Hoogendoorn" />
-			<Image src={LyceoImage} class="grayscale object-contain opacity-50" height="30px" alt="Logo Lyceo" />
-			<Image src={RTLXLImage} class="grayscale object-contain opacity-50" height="30px" 	alt="Logo RTLXL" />
+			<Clients/>
 		</section>
 
 		<h2 class="text-5xl font-bold text-center">Work experience</h2>
-
 		<section class="grid md:grid-cols-2 mb-12">
-			<div class="">
-				<!--<div class="bg-white rounded-full p-2">-->
-				<!--	<Image src={ionicImage} alt="Ionic" height="40px"/>-->
-				<!--</div>-->
-				<!--<div class="bg-white rounded-full p-2">-->
-				<!--	<Image src={jestImage} alt="Jesy" height="40px"/>-->
-				<!--</div>-->
-				<!--<div class="bg-white rounded-full p-2">-->
-				<!--	<Image src={angularImage} alt="Angular" height="40px"/>-->
-				<!--</div>-->
-			</div>
-			<ul class="list-none">
-				<li class="grid grid-cols-experience mb-8">
-					<small class="text-gray-500">March 2022 - current</small>
-					<h3 class="text-xl font-bold">Vanderlande</h3>
-					<small class="text-gray-500 col-start-2 leading-3 mb-3">Senior JavaScript Developer</small>
-					<p class="col-start-2 text-sm leading-6">
-						Fulfilled the senior frontend role within the team and coached junior developers. Worked on a process
-						mining tool for the baggage handling system of large airports.
-					</p>
-				</li>
-				<li class="grid grid-cols-experience mb-6">
-					<small class="text-gray-500">Apr 2021 - Feb 2022</small>
-					<h3 class="text-xl font-bold">Hoogendoorn Growth Management</h3>
-					<small class="text-gray-500 col-start-2 leading-3 mb-3">Senior JavaScript Developer</small>
-					<p class="col-start-2 text-sm leading-6">
-						Worked in two different teams within Hoogendoorn. Build a sophisticated dashboard for Greenhouse
-						automation, with lots of views, reports, graphs and customizable content.
-					</p>
-				</li>
-				<li class="grid grid-cols-experience mb-6">
-					<small class="text-gray-500">Sept 2018 - Mar 2021</small>
-					<h3 class="text-xl font-bold">Lyceo</h3>
-					<small class="text-gray-500 col-start-2 leading-3 mb-3">JavaScript Developer</small>
-					<p class="col-start-2 text-sm leading-6">
-						Authority within the team with regards to frontend. Worked on a complex scheduling application in Angular. Also created various apps in
-						Ionic. Did full stack work on a homework institute tool with a Laravel API and a Vue.js frontend.
-					</p>
-				</li>
-				<li class="grid grid-cols-experience mb-6">
-					<small class="text-gray-500">Sept 2017 - aug 2018</small>
-					<h3 class="text-xl font-bold">Lyceo</h3>
-					<small class="text-gray-500 col-start-2 leading-3 mb-3">Wordpress Developer</small>
-					<p class="col-start-2 text-sm leading-6">
-						Setup a mature infrastructure for the hosting of 15 wordpress websites on AWS,
-						including automatic updates, security checks and monitoring. For the complexer webshops I set up a React frontend in TypeScript.
-					</p>
-				</li>
-				<li class="grid grid-cols-experience">
-					<small class="text-gray-500">Apr 2014 - Feb 2018</small>
-					<h3 class="text-xl font-bold">Freelance Webdeveloper</h3>
-					<p class="col-start-2 text-sm leading-6">
-						During my studies at the TU Delft, I worked as a freelance web developer. I designed and developed tailored
-						wordpress websites. Apart from that I developed a frontend for a various dashboards, using javascript and scss.
-					</p>
-				</li>
-
-			</ul>
+			<WorkExperience/>
 		</section>
 
 		<h2 class="text-5xl font-bold text-center">Highlighted side projects</h2>
 
-		<section class="grid md:grid-cols-3 gap-6">
-			<article class="bg-blue-50 rounded-xl p-10 flex flex-col gap-6">
-				<h3 class="text-xl font-bold">TrackingTime Dashboard</h3>
-				<p class="flex-1 text-sm">
-					Combining the data from the gitlab and tracking time to provide insights in the teams
-					performance
-				</p>
-				<footer class="flex gap-2">
-					<div class="bg-white rounded-full p-2">
-						<Image src={ionicImage} alt="Ionic" height="24px"/>
-					</div>
-					<div class="bg-white rounded-full p-2">
-						<Image src={laravelImage} alt="Laravel" height="24px"/>
-					</div>
-					<div class="bg-white rounded-full p-2">
-						<Image src={postgresImage} alt="PostgresSql" height="24px"/>
-					</div>
-				</footer>
-			</article>
-
-			<article class="bg-blue-50 rounded-xl p-10 flex flex-col gap-6">
-				<h3 class="text-xl font-bold">Cockpit</h3>
-				<p class="flex-1 text-sm">
-					Combining the data from the gitlab and tracking time to provide insights in the teams
-					performance Combining the data from the gitlab and tracking time to provide insights in the teams
-					performance
-				</p>
-				<footer class="flex gap-2">
-					<div class="bg-white rounded-full p-2">
-						<Image src={nextJsImage} alt="NextJS" height="24px"/>
-					</div>
-					<div class="bg-white rounded-full p-2">
-						<Image src={prismaImage} alt="Prisma" height="24px"/>
-					</div>
-					<div class="bg-white rounded-full p-2">
-						<Image src={trpcImage} alt="tRPC" height="24px"/>
-					</div>
-					<div class="bg-white rounded-full p-2">
-						<Image src={postgresImage} alt="PostgresSql" height="24px"/>
-					</div>
-					<div class="bg-white rounded-full p-2 grayscale-80">
-						<Image src={playwrightImage} alt="Playwright" height="24px"/>
-					</div>
-					<div class="bg-white rounded-full p-2">
-						<Image src={jestImage} alt="Jest" height="24px"/>
-					</div>
-				</footer>
-			</article>
-
-			<article class="bg-blue-50 rounded-xl p-10 flex flex-col gap-6">
-				<h3 class="text-xl font-bold">OtisInsights</h3>
-				<p class="flex-1 text-sm">
-					Combining the data from the gitlab and tracking time to provide insights in the teams
-					performance
-				</p>
-				<footer class="flex gap-2">
-					<div class="bg-white rounded-full p-2">
-						<Image src={ionicImage} alt="Ionic" height="24px"/>
-					</div>
-					<div class="bg-white rounded-full p-2">
-						<Image src={laravelImage} alt="Laravel" height="24px"/>
-					</div>
-				</footer>
-			</article>
+		<section class="w-[300px]">
+			<SideProjects client:visible/>
 		</section>
 	</main>
-
 </Layout>
-
