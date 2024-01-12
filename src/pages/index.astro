@@ -10,19 +10,18 @@ import Clients from '../components/Clients.astro';
 	<Header/>
 
 	<main class="order-3 content grid gap-y-14 py-14">
-		<section class="flex justify-around mb-12 flex-col md:flex-row gap-y-6 items-center">
-			<Clients/>
-		</section>
+		<Clients/>
 
 		<h2 class="text-5xl font-bold text-center">Work experience</h2>
-		<section class="grid md:grid-cols-2 mb-12">
-			<WorkExperience/>
-		</section>
-
-		<h2 class="text-5xl font-bold text-center">Highlighted side projects</h2>
+		<WorkExperience/>
 
 		<section>
-			<SideProjects client:idle/>
+			<h2 class="text-5xl font-bold text-center">Highlighted side projects</h2>
+			<p class="text-center  py-8">Always working on many side projects, to try out new
+				things and to keep up to date with the latest technologies. </p>
+			<SideProjects client:only="react"/>
+
 		</section>
+
 	</main>
 </Layout>

@@ -6,7 +6,9 @@ import RTLXLImage from '../images/rtlxl.png';
 import { Image } from 'astro:assets';
 ---
 
-<Image src={VanderlandeImage} class="grayscale object-contain opacity-50" height="30" alt="Logo vanderlande" />
-<Image src={HoogendoornImage} class="grayscale object-contain opacity-50" height="30" alt="Logo Hoogendoorn" />
-<Image src={LyceoImage} class="grayscale object-contain opacity-50" height="30" alt="Logo Lyceo" />
-<Image src={RTLXLImage} class="grayscale object-contain opacity-50" height="30" 	alt="Logo RTLXL" />
+<section class="flex justify-around mb-12 flex-col md:flex-row gap-y-6 items-center">
+  <Image src={VanderlandeImage} class="grayscale object-contain opacity-50" height="30" alt="Logo vanderlande" />
+  <Image src={HoogendoornImage} class="grayscale object-contain opacity-50" height="30" alt="Logo Hoogendoorn" />
+  <Image src={LyceoImage} class="grayscale object-contain opacity-50" height="30" alt="Logo Lyceo" />
+  <Image src={RTLXLImage} class="grayscale object-contain opacity-50" height="30" 	alt="Logo RTLXL" />
+</section>
