@@ -1,0 +1,15 @@
+---
+import VanderlandeImage from '@images/vanderlande.svg';
+import HoogendoornImage from '@images/hoogendoorn.png';
+import LyceoImage from '@images/lyceo.svg';
+import RTLXLImage from '@images/rtlxl.png';
+import { Image } from 'astro:assets';
+// https://medium.com/@stheodorejohn/creating-a-simple-marquee-effect-with-css-animation-bbd52bb0dbf8
+---
+
+<section class="flex justify-around mb-12 flex-col md:flex-row gap-y-6 items-center">
+  <Image src={VanderlandeImage} class="grayscale object-contain opacity-80" height="30" alt="Logo vanderlande" />
+  <Image src={HoogendoornImage} class="grayscale object-contain opacity-80" height="30" alt="Logo Hoogendoorn" />
+  <Image src={LyceoImage} class="grayscale object-contain opacity-80" height="30" alt="Logo Lyceo" />
+  <Image src={RTLXLImage} class="grayscale object-contain opacity-80" height="30" 	alt="Logo RTLXL" />
+</section>

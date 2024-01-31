@@ -1,0 +1,37 @@
+---
+const { class: className } = Astro.props;
+---
+
+<div class={(className || '') + " bg-white/10 border-white/10 border rounded-xl p-4 shadow-2xl opacity-40 flex flex-col"}>
+    <div class="flex justify-between items-center">
+        <div class="h-2 w-16 bg-white/60 rounded mr-auto"/>
+        <div class="h-2 w-8 bg-purple-600 my-2 rounded"/>
+    </div>
+
+    <hr class="border-white/20 mt-3 mb-6">
+
+    <div class="mb-6">
+        <div class="h-1 w-16 bg-white/60 my-2 rounded mr-auto"/>
+        <div class="h-1 w-full bg-white/60 my-2 rounded mr-auto"/>
+    </div>
+
+    <div class="mb-6 bg-white/5 p-4">
+        <div class="h-1 w-16 bg-white/60 my-2 rounded mr-auto"/>
+        <div class="h-1 w-full bg-white/60 my-2 rounded mr-auto"/>
+        <div class="h-1 w-40 bg-white/60 my-2 rounded mr-auto"/>
+    </div>
+
+    <div class="h-1 w-12 bg-white/60 my-2 rounded mr-auto"/>
+
+    <div class="flex justify-between items-center border-t border-white/10 flex">
+        <div class="h-2 w-2 bg-purple-600 my-2 mr-2 rounded-sm"/>
+        <div class="h-1 w-24 bg-white/60 m-2 rounded mr-auto"/>
+    </div>
+
+    <div class="flex justify-between items-center border-y border-white/10 flex">
+        <div class="h-2 w-2 bg-purple-600 my-2 mr-2 rounded-sm"/>
+        <div class="h-1 w-24 bg-white/60 m-2 rounded mr-auto"/>
+    </div>
+
+    <div class="h-4 w-full bg-purple-600 mt-auto rounded"/>
+</div>

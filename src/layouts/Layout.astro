@@ -6,7 +6,6 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -16,13 +15,20 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="dark:bg-bg dark:text-white">
 		<slot />
 	</body>
 </html>
 
+<script>
+	import { register } from 'swiper/element/bundle';
+
+	register();
+</script>
+
 <style is:global>
 	body {
+		scroll-behavior: smooth;
 		--padding-inline: 1rem;
 		--content-max-width: 1200px;
 		--breakout-max-width: 1400px;
@@ -64,4 +70,62 @@ const { title } = Astro.props;
 		display: grid;
 		grid-template-columns: inherit;
 	}
+
+	.side-projects {
+		grid-column-start: content-start;
+		grid-column-end: -1;
+
+		@media screen and (max-width: 640px) {
+			grid-column-end: content-end;
+		}
+	}
+
+	.client-header {
+		box-shadow: 0 0 30px 30px hsl(249 22% 12%);
+		background: hsl(249 22% 12% / 0.96);
+	}
+
+	swiper-slide  {
+		z-index: 1;
+		padding: 1em 1em 2.5rem 1em;
+		position: relative;
+	}
+
+	div.swiper-slide {
+		display: flex;
+	}
+
+	.glow-card::after {
+		filter: blur(0.5rem);
+	}
+
+	.glow-card::before,
+	.glow-card::after {
+		content: "";
+		position: absolute;
+		inset: -1px;
+		border-radius: 0.75rem;
+		background: conic-gradient(
+			from 0deg at 50% 50%,
+			oklch(0.624 0.201 306.747),
+			oklch(55.6% .1195 247.11),
+			oklch(0.624 0.201 306.747)
+		);
+		z-index: -1;
+	}
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	.fadeInUp {
+		animation: fadeInUp 0.2s ease-in-out;
+	}
+
 </style>

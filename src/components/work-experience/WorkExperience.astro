@@ -1,0 +1,148 @@
+---
+import './work-experience.scss';
+import Vanderlande from './content/vanderlande.astro';
+import Hoogendoorn from './content/hoogendoorn.astro';
+import LetsGrow from './content/letsgrow.astro';
+import LyceoFe from './content/lyceo-fe.astro';
+import LyceoWp from './content/lyceo-wp.astro';
+import Freelance from './content/freelance.astro';
+import FreelanceBg from './illustrations/freelance/bg.astro';
+import FreelanceCard from './illustrations/freelance/card.astro';
+import HoogendoornBg from './illustrations/hoogendoorn/bg.astro';
+import HoogendoornRTR from './illustrations/hoogendoorn/rtr.astro';
+import LetsGrowBg from './illustrations/letsgrow/bg.astro';
+import LetsGrowGraph from './illustrations/letsgrow/graph.astro';
+import Task from './illustrations/lyceo-fe/task.astro';
+import Details from './illustrations/lyceo-fe/details.astro';
+import Lesson from './illustrations/lyceo-fe/lesson.astro';
+import LyceoRow from './illustrations/lyceo-wp/row.astro';
+import VanderlandeBg from './illustrations/vanderlande/bg.astro';
+import VanderlandeGraph from './illustrations/vanderlande/graph.astro';
+---
+
+<section class="hidden md:grid grid-cols-[1fr_50px_1fr] mb-12 work-experience">
+    <div class="tech-stack relative md:sticky md:top-1/3 md:bottom-0 hidden md:block" data-active="vanderlande">
+        <div class="vanderlande-wireframe fadeInUp h-96 hidden relative max-w-full">
+            <VanderlandeBg class="absolute ml-2 md:ml-14 h-80 w-full md:w-3/4"/>
+            <VanderlandeGraph class="absolute h-52 w-96" />
+        </div>
+
+        <div class="hoogendoorn-wireframe fadeInUp relative hidden h-96 max-w-full">
+            <HoogendoornBg class="h-80 w-3/4"/>
+            <HoogendoornRTR class="absolute top-28 left-16 w-96"/>
+        </div>
+
+        <div class="letsgrow-wireframe fadeInUp relative hidden h-96 max-w-full">
+            <LetsGrowBg class="h-80 w-3/4 ml-12"/>
+            <LetsGrowGraph class="absolute top-24"/>
+        </div>
+
+        <div class="lyceo-fe-wireframe fadeInUp relative hidden h-96 mb-12 max-w-full">
+            <Details class="h-96 w-60 left-1/2 -ml-32 relative"/>
+            <Lesson class="w-80 top-20 absolute"/>
+            <Task class="w-80 md:ml-24 top-64 absolute"/>
+        </div>
+
+        <div class="lyceo-wp-wireframe fadeInUp hidden max-w-full">
+            <div class="flex flex-col gap-4 md:p-4 md:mr-24">
+              {[0,0,0].map(() => <LyceoRow/>)}
+            </div>
+        </div>
+
+        <div class="freelance-wireframe fadeInUp hidden relative h-96 max-w-full">
+            <FreelanceBg class="h-80 w-80 m:w-96"/>
+            <FreelanceCard class="w-60 h-80 right-8 top-8 absolute"/>
+        </div>
+    </div>
+
+    <div class="progress-container">
+        <div class="progress"></div>
+        <img src="/profile-mobile.jpg" alt="Avatar" class="avatar sticky h-8 w-8 min-w-8  bg-white rounded-full top-1/2 outline outline-2 outline-offset-2 outline-blue-500/50"/>
+    </div>
+
+    <div class="flex flex-col gap-40">
+        <Vanderlande/>
+        <Hoogendoorn/>
+        <LetsGrow/>
+        <LyceoFe/>
+        <LyceoWp/>
+        <Freelance/>
+    </div>
+</section>
+
+<swiper-container
+  class="grid md:hidden"
+  slides-per-view="1"
+  pagination
+  space-between="0"
+  loop>
+    <swiper-slide>
+        <VanderlandeGraph class="mb-8"/>
+        <Vanderlande/>
+    </swiper-slide>
+    <swiper-slide>
+        <HoogendoornRTR class="mb-8"/>
+        <Hoogendoorn/>
+    </swiper-slide>
+    <swiper-slide>
+        <LetsGrowGraph class="mb-8"/>
+        <LetsGrow/>
+    </swiper-slide>
+    <swiper-slide>
+        <Lesson  class="mb-8"/>
+        <LyceoFe/>
+    </swiper-slide>
+    <swiper-slide>
+        <LyceoRow class="mb-8"/>
+        <LyceoWp/>
+    </swiper-slide>
+    <swiper-slide>
+        <FreelanceCard class="mb-8"/>
+        <Freelance/>
+    </swiper-slide>
+</swiper-container>
+
+<script>
+  const containerEl = document.querySelector('.tech-stack') as HTMLElement;
+
+  const callBackFunction = ([{target, isIntersecting}]: IntersectionObserverEntry[]) => {
+    if (!(target instanceof HTMLElement)) {
+      return;
+    }
+
+    isIntersecting
+      ? target.classList.add('active')
+      : target.classList.remove('active');
+
+    containerEl.dataset.active = isIntersecting
+      ? target.dataset.client
+      : target.dataset.prev;
+  };
+
+  const observer = new IntersectionObserver(callBackFunction, {
+    rootMargin: '300% 0% -50% 0%'
+  });
+
+  document
+    .querySelectorAll('small:first-child')
+    .forEach((i: Element) => observer.observe(i));
+
+  /**
+   * Parallax effect
+   */
+  // const level1 = document.querySelector(".js-parallax-bg") as HTMLElement;
+  // const level2 = document.querySelector(".js-parallax-fg") as HTMLElement;
+  //
+  // let timeout;
+  //
+  // document.addEventListener('scroll', () => {
+  //   if (timeout) {
+  //     window.cancelAnimationFrame(timeout);
+  //   }
+  //
+  //   timeout = window.requestAnimationFrame(() => {
+  //     level1.style.transform = `translateY(${window.scrollY * 0.2}px)`;
+  //     level2.style.transform = `translateY(${window.scrollY* 0.1}px)`;
+  //   })
+  // });
+</script>

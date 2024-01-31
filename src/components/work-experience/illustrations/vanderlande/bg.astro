@@ -1,0 +1,18 @@
+---
+const { class: className } = Astro.props;
+---
+
+<div class={(className || '') + " bg-white/5 border-white/10 border rounded-xl grid grid-cols-12 grid-rows-12 overflow-hidden -z-10"}>
+    <header class="bg-white/5 row-start-1 row-span-1 col-start-1 col-end-13 flex justify-end">
+        <div class="h-2 w-2 bg-white/60 m-2 rounded"/>
+        <div class="h-2 w-2 bg-white/60 m-2 rounded"/>
+        <div class="h-2 w-2 bg-white/60 m-2 rounded"/>
+    </header>
+    <div class="bg-black/10 row-start-2 row-span-11 col-start-9 col-end-13 mb-0 p-2 rounded">
+        <div class="h-1 w-1/2 bg-purple-600 rounded"/>
+        <div class="h-4 w-full bg-black/20 mb-2 mt-4 rounded"/>
+        <div class="h-20 w-full bg-black/20 my-2 rounded"/>
+        <div class="h-20 w-full bg-black/20 my-2 rounded"/>
+        <div class="h-20 w-full bg-black/20 my-2 rounded"/>
+    </div>
+</div>

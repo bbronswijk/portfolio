@@ -1,0 +1,17 @@
+---
+const { class: className } = Astro.props;
+import graphImage from './graph.png';
+import { Image } from 'astro:assets';
+---
+
+<div class={(className || '') + " shadow-2xl rounded-lg bg-bg shadow-2xl border-white/10 border p-8"}>
+    <div class="flex gap-2">
+        <div class="h-1 w-1/4 bg-purple-600 rounded mb-12 mr-auto"/>
+        <div class="h-2 w-2 bg-purple-600 rounded"/>
+        <div class="h-2 w-2 bg-purple-600 rounded"/>
+        <div class="h-2 w-2 bg-purple-600 rounded"/>
+        <div class="h-2 w-2 bg-purple-600 rounded"/>
+        <div class="h-2 w-2 bg-purple-600 rounded"/>
+    </div>
+    <Image src={graphImage} alt="chart" height={120} width={300}/>
+</div>

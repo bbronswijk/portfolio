@@ -6,8 +6,14 @@ export default {
 			grayscale: {
 				80: '80%',
 			},
-			gridTemplateColumns: {
-				experience: '180px 1fr',
+			textShadow: {
+				sm: '0 1px 2px var(--tw-shadow-color)',
+				DEFAULT: '0 4px 1em hsl(267 57% 63% / 0.6)',
+				lg: '0 8px 16px var(--tw-shadow-color)',
+			},
+			colors: {
+				bg: 'hsl(249 22% 12% / <alpha-value>)',
+				card: 'hsl(249 22% 20% / <alpha-value>)',
 			}
 		},
 	},

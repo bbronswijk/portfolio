@@ -1,0 +1,35 @@
+---
+const {class: className} = Astro.props;
+---
+
+<div class={(className || '')}>
+    <div class="shadow-2xl rounded-lg bg-bg shadow-2xl border-white/10 border p-4 flex gap-12 relative">
+        <div class="overflow-hidden h-48 w-48 relative">
+            <div class="h-80 w-80 bg-purple-600 rounded-full absolute bottom-0 left-0 -ml-40 -mb-40"/>
+            <div class="overflow-hidden absolute h-48 w-48 border-bg border-2 origin-bottom-left"/>
+            <div class="overflow-hidden absolute h-48 w-48 bg-bg/20 border-bg border-2 origin-bottom-left rotate-[18deg]"/>
+            <div class="overflow-hidden absolute h-48 w-48 bg-bg/20 border-bg border-2 origin-bottom-left rotate-[36deg]"/>
+            <div class="overflow-hidden absolute h-48 w-48 bg-bg/20 border-bg border-2 origin-bottom-left rotate-[54deg]"/>
+            <div class="overflow-hidden absolute h-48 w-48 bg-bg/20 border-bg border-2 origin-bottom-left rotate-[72deg]"/>
+            <div class="h-1 w-40 bg-white rounded-xl rounded absolute bottom-1 left-1 origin-left rotate-[315deg]"/>
+        </div>
+
+        <div class="overflow-hidden absolute h-48 w-48 left-3 bottom-3">
+            <div class="h-2 w-2 bg-white/60 rounded-sm absolute left-[0.2rem] top-[1.0rem]"/>
+            <div class="h-2 w-2 bg-white/60 rounded-sm absolute left-[3.3rem] top-[1.5rem]"/>
+            <div class="h-2 w-2 bg-white/60 rounded-sm absolute left-[6.3rem] top-[2.9rem]"/>
+            <div class="h-2 w-2 bg-white/60 rounded-sm absolute left-[8.6rem] top-[5.3rem]"/>
+            <div class="h-2 w-2 bg-white/60 rounded-sm absolute left-[10.1rem] top-[8.2rem]"/>
+            <div class="h-2 w-2 bg-white/60 rounded-sm absolute left-[10.6rem] bottom-1"/>
+        </div>
+
+        <div class="h-12 w-12 bg-bg rounded-full absolute bottom-1 left-1"></div>
+
+        <div class="flex flex-1 flex-col gap-3 items-end p-4 rounded">
+            <div class="h-3 w-full bg-white/60 rounded-sm"/>
+            <div class="h-3 w-full bg-white/60 rounded-sm"/>
+            <div class="h-3 w-full bg-white/60 rounded-sm"/>
+            <div class="h-3 w-full bg-white/60 rounded-sm"/>
+        </div>
+    </div>
+</div>

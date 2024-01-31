@@ -1,0 +1,29 @@
+---
+const { class: className } = Astro.props;
+---
+
+<div class={(className || '') + " bg-white/5 border-white/10 border rounded-xl grid grid-cols-12 grid-rows-12"}>
+    <aside class="bg-black/10 row-span-12 row-start-3 col-start-1 col-span-2 flex flex-col justify-items gap-1 items-center p-3">
+        <div class="h-2 w-full bg-white/60 m-2 rounded"/>
+        <div class="h-2 w-full bg-white/60 m-2 rounded"/>
+        <div class="h-2 w-full bg-white/60 m-2 rounded"/>
+        <div class="h-2 w-full bg-white/60 m-2 rounded"/>
+    </aside>
+    <header class="bg-white/5 row-start-1 row-span-2 col-start-3 col-end-13 flex items-center">
+        <div class="h-2 w-2 bg-white/60 ml-4 mr-auto rounded"/>
+        <div class="h-2 w-24 bg-white/60 rounded-xl mx-4 rounded"/>
+        <div class="h-2 w-4 bg-white/60 mx-2 rounded"/>
+        <div class="h-2 w-6 bg-white/60 mx-2 rounded"/>
+        <div class="h-2 w-4 bg-white/60 mx-2 rounded"/>
+    </header>
+
+    <div class="bg-black/20 row-start-3 row-end-13 col-start-3 mt-3 mb-3 mr-3 col-end-3 rounded"/>
+    <div class="bg-black/20 row-start-3 row-end-13 col-start-4 my-3 col-end-8 rounded">
+        <div class="h-1 w-1/2 bg-purple-600 m-2 rounded"/>
+    </div>
+    <div class="bg-black/20 row-start-3 row-end-13 col-start-8 m-3 col-end-13 rounded">
+        <div class="h-1 w-1/2 bg-purple-600 m-2 rounded"/>
+    </div>
+</div>
+
+

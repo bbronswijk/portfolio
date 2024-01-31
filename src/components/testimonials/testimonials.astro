@@ -1,0 +1,24 @@
+---
+import Anna from './anna.astro';
+import Hilda from './hilda.astro';
+import Melike from './melike.astro';
+---
+
+<h2 class="text-6xl font-bold text-center [text-shadow:_0_4px_1em_hsl(267_57%_63%_/_0.6)] client-header">What my clients say</h2>
+<section class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <Anna/>
+    <Hilda/>
+    <Melike/>
+</section>
+
+<swiper-container class="grid md:hidden" slides-per-view="1" pagination space-between="0" loop>
+    <swiper-slide>
+        <Anna/>
+    </swiper-slide>
+    <swiper-slide>
+        <Hilda/>
+    </swiper-slide>
+    <swiper-slide>
+        <Melike/>
+    </swiper-slide>
+</swiper-container>

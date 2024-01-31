@@ -1,0 +1,38 @@
+---
+// import ProfileImage from '@images/profile.webp';
+import ProfileImage from '@images/profile-2.webp';
+import ProfileMobileImage from '@images/profile-mobile.webp';
+---
+
+<picture class="order-none md:order-1 mt-4 md:mt-0 col-start-3 md:col-start-4 col-span-2 md:col-span-3 md:min-h-[540px] object-fill flex justify-center">
+    <source media="(min-width:768px)" srcset={ProfileImage.src}/>
+    <img class="rounded-full md:rounded-none h-60 w-60 md:h-auto md:w-auto object-cover object-left md:h-full -z-10"
+         src={ProfileMobileImage.src}
+         alt="Profile picture of Bram Bronswijk"
+         loading="eager"/>
+</picture>
+
+<section class="order-1 md:order-none flex flex-col align-start justify-center h-full col-start-3 col-span-2 md:col-start-3 md:col-span-1 py-4">
+    <span class="text-3xl md:text-5xl -ml-1 [text-shadow:_0_4px_1em_hsl(267_57%_63%_/_0.6)]">Hi, I am,</span>
+    <p class="text-6xl md:text-9xl font-bold -ml-2 [text-shadow:_0_4px_1em_hsl(267_57%_63%_/_0.6)]">Bram</p>
+    <p class="max-w-96 [text-shadow:_0_4px_1em_hsl(267_57%_63%_/_0.6)]">
+        A full-stack developer with a passion for UI design
+        and frontend development.
+    </p>
+    <button class="bg-violet-800 text-white rounded border-none outline-none py-2 px-10 font-bold self-start my-4 md:my-8">My resume</button>
+</section>
+
+<section class="glow-card order-2 bg-blue-50 dark:bg-card rounded-xl flex flex-col gap-y-4 md:flex-row font-bold md:h-28 p-8 w-full md:w-2/3 justify-around md:-mt-12 relative content">
+    <div class="flex gap-2">
+        <div class="text-5xl">4</div>
+        <div class="text-2xl leading-6">NPM<br/>Packages</div>
+    </div>
+    <div class="flex gap-2">
+        <div class="text-5xl">30</div>
+        <div class="text-2xl leading-6">Side<br/>projects</div>
+    </div>
+    <div class="flex gap-2">
+        <div class="text-5xl">29</div>
+        <div class="text-2xl leading-6">Worked with<br/>companies</div>
+    </div>
+</section>

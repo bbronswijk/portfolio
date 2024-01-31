@@ -1,0 +1,36 @@
+---
+const { class: className } = Astro.props;
+---
+
+<div class={(className || '') + " bg-bg border-white/10 border rounded-xl p-4 shadow-2xl"}>
+    <div class="text-[10px] flex justify-between items-center">
+        <div class="h-2 w-16 bg-white/60 rounded mr-auto"/>
+        <div class="h-2 w-8 bg-purple-600 my-2 rounded"/>
+    </div>
+    <div class="h-4 w-full bg-purple-600 my-4 rounded"/>
+    <div class="mb-6">
+        <div class="h-1 w-full bg-white/60 my-2 rounded mr-auto"/>
+        <div class="h-1 w-32 bg-white/60 my-2 rounded mr-auto"/>
+    </div>
+
+    <div class="text-[8px] flex justify-between items-center border-t border-white/10 flex">
+        <div class="h-2 w-2 bg-purple-600 my-2 mr-2 rounded-sm"/>
+        <div class="h-1 w-24 bg-white/60 m-2 rounded mr-auto"/>
+        <div class="h-2 w-8 bg-purple-600 my-2 rounded"/>
+    </div>
+    <div class="text-[8px] flex justify-between items-center border-t border-white/10 flex">
+        <div class="h-2 w-2 bg-purple-600 my-2 mr-2 rounded-sm"/>
+        <div class="h-1 w-24 bg-white/60 m-2 rounded mr-auto"/>
+        <div class="h-2 w-8 bg-purple-600 my-2 rounded"/>
+    </div>
+    <div class="text-[8px] flex justify-between items-center border-t border-white/10 flex">
+        <div class="h-2 w-2 bg-purple-600 my-2 mr-2 rounded-sm"/>
+        <div class="h-1 w-24 bg-white/60 m-2 rounded mr-auto"/>
+        <div class="h-2 w-8 bg-purple-600 my-2 rounded"/>
+    </div>
+    <div class="text-[8px] flex justify-between items-center border-y border-white/10 flex">
+        <div class="h-2 w-2 bg-purple-600 my-2 mr-2 rounded-sm"/>
+        <div class="h-1 w-24 bg-white/60 m-2 rounded mr-auto"/>
+        <div class="h-2 w-8 bg-purple-600 my-2 rounded"/>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+---
+import Client from '../Client.astro';
+import jestImage from '../../../images/jest.png';
+import dockerImage from '../../../images/docker.png';
+import typescriptImage from '../../../images/typescript.svg';
+import wordpressImage from '../../../images/wordpress.png';
+import awsImage from '../../../images/aws.webp';
+import scssImage from '../../../images/scss.png';
+import jqueryImage from '../../../images/jquery.gif';
+import phpImage from '../../../images/php.png';
+import reactImage from '../../../images/react.png';
+import nginxImage from '../../../images/nginx.svg';
+import cypressImage from '../../../images/cypress.png';
+import webpackImage from '../../../images/webpack.svg';
+---
+
+<Client id="lyceo-wp" prev="lyceo-fe" name="Lyceo" period="Sept 2017 - aug 2018" position="Wordpress Developer"
+        techStack={[
+            {name: 'Wordpress', src: wordpressImage.src},
+            {name: 'Docker', src: dockerImage.src},
+            {name: 'Typescript', src: typescriptImage.src},
+            {name: 'scss', src: scssImage.src},
+            {name: 'jquery', src: jqueryImage.src},
+            {name: 'php', src: phpImage.src},
+            {name: 'react', src: reactImage.src},
+            {name: 'NGINX', src: nginxImage.src},
+            {name: 'Cypress', src: cypressImage.src},
+            {name: 'Webpack', src: webpackImage.src},
+            {name: 'AWS', src: awsImage.src},
+            {name: 'Jest', src: jestImage.src},
+        ]}>
+    Setup a mature infrastructure for the hosting of 15 wordpress websites on AWS,
+    including automatic updates, security checks and monitoring. For the complexer webshops I set up a React
+    frontend in TypeScript.
+</Client>
