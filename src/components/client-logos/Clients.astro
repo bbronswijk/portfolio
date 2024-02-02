@@ -1,15 +1,114 @@
 ---
-import VanderlandeImage from '@images/vanderlande.svg';
-import HoogendoornImage from '@images/hoogendoorn.png';
-import LyceoImage from '@images/lyceo.svg';
-import RTLXLImage from '@images/rtlxl.png';
+import VanderlandeImage from '@images/clients/vanderlande.svg';
+import HoogendoornImage from '@images/clients/hoogendoorn.png';
+import LyceoImage from '@images/clients/lyceo.svg';
+import RTLXLImage from '@images/clients/rtlxl.png';
+import LagaImage from '@images/clients/laga.png';
+import LetsGrow from '@images/clients/letsgrow.png';
+import AuthoriteitIncasso from '@images/clients/authoriteit-incasso.png';
+import FourteenDayzImage from '@images/clients/14dayz.png';
+import OrasImage from '@images/clients/oras.png';
+import enVinkeImage from '@images/clients/enVINKE.png';
+import inspiringInsightsImage from '@images/clients/inspiring-insights.png';
+import rowCoachingImage from '@images/clients/rowcoaching.png';
+import vrpImage from '@images/clients/vrp.png';
+import proteusImage from '@images/clients/proteus.png';
+import ashtoniaImage from '@images/clients/ashtonia.png';
+import prezzenceImage from '@images/clients/prezzence.png';
+import orangeClogImage from '@images/clients/orange-clog.png';
+import juristenCollectiefImage from '@images/clients/juristencollectief.png';
+import otisInsights from '@images/clients/otis-insights.png';
+import hollandsVenetieInsights from '@images/clients/hollands-venetie.png';
+import vrouwInFamilieBedrijf from '@images/clients/vrouw-in-familie-bedrijf.png';
+import irisImage from '@images/clients/iris.png';
 import { Image } from 'astro:assets';
-// https://medium.com/@stheodorejohn/creating-a-simple-marquee-effect-with-css-animation-bbd52bb0dbf8
+
+const breakpoints = JSON.stringify({
+  640: {
+    slidesPerView: 3,
+  },
+  1024: {
+    slidesPerView: 4,
+  },
+});
 ---
 
-<section class="flex justify-around mb-12 flex-col md:flex-row gap-y-6 items-center">
-  <Image src={VanderlandeImage} class="grayscale object-contain opacity-80" height="30" alt="Logo vanderlande" />
-  <Image src={HoogendoornImage} class="grayscale object-contain opacity-80" height="30" alt="Logo Hoogendoorn" />
-  <Image src={LyceoImage} class="grayscale object-contain opacity-80" height="30" alt="Logo Lyceo" />
-  <Image src={RTLXLImage} class="grayscale object-contain opacity-80" height="30" 	alt="Logo RTLXL" />
-</section>
+<swiper-container
+        class="grid"
+        slides-per-view="1"
+        slides-per-view="auto"
+
+        space-between="0"
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction
+        breakpoints={breakpoints}
+        loop>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={VanderlandeImage} class="grayscale object-contain opacity-80" height="30" alt="Logo vanderlande" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={HoogendoornImage} class="grayscale object-contain opacity-80" height="30" alt="Logo Hoogendoorn" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={LyceoImage} class="grayscale object-contain opacity-80" height="30" alt="Logo Lyceo" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={RTLXLImage} class="grayscale object-contain opacity-80" height="30" alt="Logo RTLXL" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={LetsGrow} class="grayscale object-contain opacity-80" height="55" alt="Logo LetsGrow.com" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={otisInsights} class="grayscale object-contain opacity-80" height="40" alt="Logo OtisInsights" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={LagaImage} class="grayscale object-contain opacity-80" height="30" alt="Logo Laga" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={OrasImage} class="grayscale object-contain opacity-80" height="25" alt="Logo ORAS" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={inspiringInsightsImage} class="grayscale object-contain" height="50" alt="Logo Inspiring Insights" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={rowCoachingImage} class="grayscale object-contain opacity-70" height="40" alt="Logo RowCoaching" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={vrpImage} class="grayscale object-contain opacity-80" height="60" alt="Logo vrp architecten" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={AuthoriteitIncasso} class="grayscale object-contain opacity-80" height="50" alt="Logo Authoriteit Incasso" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={proteusImage} class="grayscale opacity-80" height="30" alt="Logo proteus eretes" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={ashtoniaImage} class="grayscale object-contain opacity-80" height="25" alt="Logo ashtonia" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={prezzenceImage} class="grayscale object-contain opacity-80" height="40" alt="Logo prezzence" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={orangeClogImage} class="grayscale object-contain opacity-80" height="40" alt="Logo OrangeClog" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={FourteenDayzImage} class="grayscale object-contain opacity-80" height="40" alt="Logo 14dayz" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={juristenCollectiefImage} class="grayscale object-contain opacity-80" height="60" alt="Logo Juristen collectief" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={enVinkeImage} class="grayscale object-contain opacity-80" height="30" alt="Logo enVinke" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={irisImage} class="grayscale object-contain opacity-80" height="40" alt="Logo powered by Iris" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={hollandsVenetieInsights} class="grayscale object-contain" height="50" alt="Logo Hollands Venentie" />
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+        <Image src={vrouwInFamilieBedrijf} class="grayscale object-contain" height="50" alt="Logo vrouw in familiebedrijf" />
+    </swiper-slide>
+
+
+</swiper-container>

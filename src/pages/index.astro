@@ -8,37 +8,35 @@ import Testimonials from '../components/testimonials/testimonials.astro';
 ---
 
 <Layout title="Bram Bronswijk | Portfolio">
-	<Header/>
+    <Header/>
 
-	<main class="order-3 content grid gap-y-14 py-14">
-		<Clients/>
+    <main class="order-3 content grid gap-y-14 py-14">
+        <Clients/>
+        <h2 class="text-5xl font-bold text-center [text-shadow:_0_4px_1em_hsl(267_57%_63%_/_0.6)]">Work experience</h2>
+        <WorkExperience/>
+    </main>
 
-		<h2 class="text-5xl font-bold text-center [text-shadow:_0_4px_1em_hsl(267_57%_63%_/_0.6)]">Work experience</h2>
-		<WorkExperience/>
-	</main>
+    <main class="order-5 side-projects grid gap-y-14 py-60">
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            <div class="h-full p-8 flex flex-col justify-center">
+                <h2 class="text-5xl font-bold [text-shadow:_0_4px_1em_hsl(267_57%_63%_/_0.6)]">
+                    Highlighted<br> side projects</h2>
+                <p class="py-8">Always working on many side projects, to try out new
+                    things and to keep up to date with the latest technologies. </p>
+            </div>
 
-	<main class="order-3 side-projects grid gap-y-14 py-14">
-		<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-			<div class="h-full p-8 flex flex-col justify-center">
-				<h2 class="text-5xl font-bold text-center [text-shadow:_0_4px_1em_hsl(267_57%_63%_/_0.6)]">Highlighted<br> side projects</h2>
-				<p class="text-center  py-8">Always working on many side projects, to try out new
-					things and to keep up to date with the latest technologies. </p>
-			</div>
+            <div class="col-span-3">
+                <SideProjects/>
+            </div>
+        </section>
+    </main>
 
-			<div class="col-span-2">
-				<SideProjects/>
-			</div>
-		</section>
-	</main>
+    <main class="order-6 content grid gap-y-14 py-14">
+        <Testimonials/>
 
-		<main class="order-3 content grid gap-y-14 py-14">
-
-	  <Testimonials/>
-
-
-		<h2 class="text-6xl font-bold text-center mt-20 [text-shadow:_0_4px_1em_hsl(267_57%_63%_/_0.6)]">Download my resume</h2>
-		<button class="bg-violet-800 text-white rounded border-none outline-none py-2 px-10 font-bold self-start w-fit m-auto">My resume</button>
-
-
-	</main>
+        <h2 class="text-6xl font-bold text-center mt-60 [text-shadow:_0_4px_1em_hsl(267_57%_63%_/_0.6)]">Download my resume</h2>
+        <button class="bg-violet-800 text-white rounded border-none outline-none py-2 px-10 font-bold self-start w-fit m-auto mb-40">
+            My resume
+        </button>
+    </main>
 </Layout>
