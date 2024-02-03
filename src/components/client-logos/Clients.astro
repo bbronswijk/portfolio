@@ -34,17 +34,16 @@ const breakpoints = JSON.stringify({
 ---
 
 <swiper-container
-        class="grid"
+        class="grid h-24 overflow-hidden"
         slides-per-view="1"
         slides-per-view="auto"
-
         space-between="0"
         autoplay-delay="2500"
         autoplay-disable-on-interaction
         breakpoints={breakpoints}
         loop>
     <swiper-slide class="flex items-center justify-center">
-        <Image src={VanderlandeImage} class="grayscale object-contain opacity-80" height="30" alt="Logo vanderlande" />
+        <Image src={VanderlandeImage} class="grayscale object-contain opacity-80" height="30" alt="Logo vanderlande"/>
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center">
         <Image src={HoogendoornImage} class="grayscale object-contain opacity-80" height="30" alt="Logo Hoogendoorn" />

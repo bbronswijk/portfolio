@@ -1,0 +1,71 @@
+---
+import Vanderlande from './content/vanderlande.astro';
+import Hoogendoorn from './content/hoogendoorn.astro';
+import Freelance from './content/freelance.astro';
+import VanderlandeGraph from './illustrations/vanderlande/graph.astro';
+import LyceoRow from './illustrations/lyceo-wp/row.astro';
+import LetsGrow from './content/letsgrow.astro';
+import LyceoFe from './content/lyceo-fe.astro';
+import HoogendoornRTR from './illustrations/hoogendoorn/rtr.astro';
+import LetsGrowGraph from './illustrations/letsgrow/graph.astro';
+import FreelanceCard from './illustrations/freelance/card.astro';
+import Lesson from './illustrations/lyceo-fe/lesson.astro';
+import LyceoWp from './content/lyceo-wp.astro';
+---
+<swiper-container
+        class="grid md:hidden"
+        slides-per-view="1"
+        pagination
+        space-between="0"
+        loop>
+    <swiper-slide>
+        <VanderlandeGraph class="mb-8"/>
+        <Vanderlande/>
+    </swiper-slide>
+    <swiper-slide>
+        <HoogendoornRTR class="mb-8"/>
+        <Hoogendoorn/>
+    </swiper-slide>
+    <swiper-slide>
+        <LetsGrowGraph class="mb-8"/>
+        <LetsGrow/>
+    </swiper-slide>
+    <swiper-slide>
+        <Lesson  class="mb-8"/>
+        <LyceoFe/>
+    </swiper-slide>
+    <swiper-slide>
+        <LyceoRow class="mb-8"/>
+        <LyceoWp/>
+    </swiper-slide>
+    <swiper-slide>
+        <FreelanceCard class="mb-8"/>
+        <Freelance/>
+    </swiper-slide>
+</swiper-container>
+
+<script>
+  const containerEl = document.querySelector('.tech-stack') as HTMLElement;
+
+  const callBackFunction = ([{target, isIntersecting}]: IntersectionObserverEntry[]) => {
+    if (!(target instanceof HTMLElement)) {
+      return;
+    }
+
+    isIntersecting
+      ? target.classList.add('active')
+      : target.classList.remove('active');
+
+    containerEl.dataset.active = isIntersecting
+      ? target.dataset.client
+      : target.dataset.prev;
+  };
+
+  const observer = new IntersectionObserver(callBackFunction, {
+    rootMargin: '300% 0% -50% 0%'
+  });
+
+  document
+    .querySelectorAll('small:first-child')
+    .forEach((i: Element) => observer.observe(i));
+</script>

@@ -18,7 +18,8 @@ import Lesson from './illustrations/lyceo-fe/lesson.astro';
 import LyceoRow from './illustrations/lyceo-wp/row.astro';
 import VanderlandeBg from './illustrations/vanderlande/bg.astro';
 import VanderlandeGraph from './illustrations/vanderlande/graph.astro';
-import avatar from '@images/profile/profile-mobile.jpg';
+import avatar from '@images/profile/profile-mobile.webp';
+import { Image } from 'astro:assets';
 ---
 
 <section class="hidden md:grid grid-cols-[1fr_50px_1fr] mb-12 work-experience">
@@ -58,7 +59,7 @@ import avatar from '@images/profile/profile-mobile.jpg';
 
     <div class="progress-container">
         <div class="progress"></div>
-        <img src={avatar.src} alt="Avatar" class="avatar sticky h-8 w-8 min-w-8  bg-white rounded-full top-1/2 outline outline-2 outline-offset-2 outline-blue-500/50"/>
+        <Image src={avatar} alt="Avatar" class="avatar sticky h-8 w-8 min-w-8  bg-white rounded-full top-1/2 outline outline-2 outline-offset-2 outline-blue-500/50"/>
     </div>
 
     <div class="flex flex-col gap-40">
@@ -70,80 +71,3 @@ import avatar from '@images/profile/profile-mobile.jpg';
         <Freelance/>
     </div>
 </section>
-
-<swiper-container
-  class="grid md:hidden"
-  slides-per-view="1"
-  pagination
-  space-between="0"
-  loop>
-    <swiper-slide>
-        <VanderlandeGraph class="mb-8"/>
-        <Vanderlande/>
-    </swiper-slide>
-    <swiper-slide>
-        <HoogendoornRTR class="mb-8"/>
-        <Hoogendoorn/>
-    </swiper-slide>
-    <swiper-slide>
-        <LetsGrowGraph class="mb-8"/>
-        <LetsGrow/>
-    </swiper-slide>
-    <swiper-slide>
-        <Lesson  class="mb-8"/>
-        <LyceoFe/>
-    </swiper-slide>
-    <swiper-slide>
-        <LyceoRow class="mb-8"/>
-        <LyceoWp/>
-    </swiper-slide>
-    <swiper-slide>
-        <FreelanceCard class="mb-8"/>
-        <Freelance/>
-    </swiper-slide>
-</swiper-container>
-
-<script>
-  const containerEl = document.querySelector('.tech-stack') as HTMLElement;
-
-  const callBackFunction = ([{target, isIntersecting}]: IntersectionObserverEntry[]) => {
-    if (!(target instanceof HTMLElement)) {
-      return;
-    }
-
-    isIntersecting
-      ? target.classList.add('active')
-      : target.classList.remove('active');
-
-    containerEl.dataset.active = isIntersecting
-      ? target.dataset.client
-      : target.dataset.prev;
-  };
-
-  const observer = new IntersectionObserver(callBackFunction, {
-    rootMargin: '300% 0% -50% 0%'
-  });
-
-  document
-    .querySelectorAll('small:first-child')
-    .forEach((i: Element) => observer.observe(i));
-
-  /**
-   * Parallax effect
-   */
-  // const level1 = document.querySelector(".js-parallax-bg") as HTMLElement;
-  // const level2 = document.querySelector(".js-parallax-fg") as HTMLElement;
-  //
-  // let timeout;
-  //
-  // document.addEventListener('scroll', () => {
-  //   if (timeout) {
-  //     window.cancelAnimationFrame(timeout);
-  //   }
-  //
-  //   timeout = window.requestAnimationFrame(() => {
-  //     level1.style.transform = `translateY(${window.scrollY * 0.2}px)`;
-  //     level2.style.transform = `translateY(${window.scrollY* 0.1}px)`;
-  //   })
-  // });
-</script>
