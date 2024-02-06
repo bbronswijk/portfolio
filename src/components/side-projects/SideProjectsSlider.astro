@@ -1,0 +1,45 @@
+---
+import Cockpit from './content/Cockpit.astro';
+import TrackingTimeDashboard from './content/TrackingTimeDashboard.astro';
+import CalendarApp from './content/CalendarApp.astro';
+import BookLessonBot from './content/BookLessonBot.astro';
+import Fleetic from './content/Fleetic.astro';
+import RecipeScraper from './content/RecipeScraper.astro';
+
+const breakpoints = JSON.stringify({
+  640: {
+    slidesPerView: 2,
+  },
+  1024: {
+    slidesPerView: 2.5,
+  },
+});
+---
+
+<swiper-container
+        class="grid"
+        slides-per-view="1"
+        pagination
+        space-between="0"
+        loop
+        breakpoints={breakpoints}
+>
+    <swiper-slide class="pt-4 px-4 pb-12">
+        <Cockpit/>
+    </swiper-slide>
+    <swiper-slide class="pt-4 px-4 pb-12">
+        <TrackingTimeDashboard/>
+    </swiper-slide>
+    <swiper-slide class="pt-4 px-4 pb-12">
+        <CalendarApp/>
+    </swiper-slide>
+    <swiper-slide class="pt-4 px-4 pb-12">
+        <BookLessonBot/>
+    </swiper-slide>
+    <swiper-slide class="pt-4 px-4 pb-12">
+        <Fleetic/>
+    </swiper-slide>
+    <swiper-slide class="pt-4 px-4 pb-12">
+        <RecipeScraper/>
+    </swiper-slide>
+</swiper-container>

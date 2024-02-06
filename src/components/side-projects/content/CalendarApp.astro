@@ -1,0 +1,29 @@
+---
+import nextJsImage from '../../../images/frameworks/next-js.svg';
+import prismaImage from '../../../images/frameworks/prisma.png';
+import trpcImage from '../../../images/frameworks/trpc.svg';
+import postgresImage from '../../../images/frameworks/postgresql.png';
+import playwrightImage from '../../../images/frameworks/playwright.png';
+import jestImage from '../../../images/frameworks/jest.png';
+import Project from '../Project.astro';
+import dockerImage from '../../../images/frameworks/docker.png';
+---
+
+<Project name="Calendar app" techStack={[
+  {src: nextJsImage.src, alt: 'Next.js'},
+  {src: prismaImage.src, alt: 'Prisma'},
+  {src: trpcImage.src, alt: 'tRPC'},
+  {src: postgresImage.src, alt: 'PostgresSql'},
+  {src: playwrightImage.src, alt: 'Playwright'},
+  {src: jestImage.src, alt: 'Jest'},
+  {src: dockerImage.src, name: 'Docker'},
+]}>
+    <p>
+        Why use an existing calendar app when you can build your own? I used Next.js to create a calendar app
+        that allows me to keep track of my appointments and events.
+    </p>
+    <p class="flex-1">
+        I leveraged the Google Calendar API to sync my events and appointments with my Google Calendar and all
+        my devices.
+    </p>
+</Project>

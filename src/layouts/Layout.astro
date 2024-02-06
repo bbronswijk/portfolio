@@ -1,132 +1,36 @@
 ---
-interface Props {
-	title: string;
-}
 import favicon from '@images/favicon.svg';
-
-const { title } = Astro.props;
+import colors from 'tailwindcss/colors';
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href={favicon.src} />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<meta name="description" content="Hi, I am, Bram. A full-stack developer with a passion for frontend development and UI design.">
+		<title>Bram Bronswijk | Portfolio</title>
 	</head>
-	<body class="dark:bg-bg dark:text-white">
+	<body class="bg-bg text-white grid grid-cols-layout">
 		<slot />
 	</body>
 </html>
 
 <script>
+	import 'swiper/css';
+	import 'swiper/css/autoplay';
+	import 'swiper/css/pagination';
 	import { register } from 'swiper/element/bundle';
 
 	register();
 </script>
 
-<style is:global>
-	body {
-		scroll-behavior: smooth;
+<style is:global define:vars={{ paginationColor: colors['violet']['800'] }}>
+	/* https://docs.astro.build/en/reference/directives-reference/#definevars */
+	/* noinspection CssUnresolvedCustomProperty */
+	:root {
 		--padding-inline: 1rem;
 		--content-max-width: 1200px;
-		--breakout-max-width: 1400px;
-
-		--breakout-size: calc(
-			(var(--breakout-max-width) - var(--content-max-width)) / 2
-		);
-
-		display: grid;
-		padding-bottom: 4rem;
-
-		grid-template-columns:
-    [full-width-start] minmax(var(--padding-inline), 1fr)
-    [breakout-start] minmax(0, var(--breakout-size))
-    [content-start] min(
-      50% - (var(--padding-inline) * 2),
-			var(--content-max-width) / 2
-    )
-		[content-center] min(
-      50% - (var(--padding-inline) * 2),
-			var(--content-max-width) / 2
-    )
-    [content-end]
-    minmax(0, var(--breakout-size)) [breakout-end]
-    minmax(var(--padding-inline), 1fr) [full-width-end];
+		--swiper-pagination-color: var(--paginationColor);
 	}
-
-	.content {
-		grid-column: content;
-	}
-
-	.breakout {
-		grid-column: breakout;
-	}
-
-	.full-width {
-		grid-column: full-width;
-
-		display: grid;
-		grid-template-columns: inherit;
-	}
-
-	.side-projects {
-		grid-column-start: content-start;
-		grid-column-end: -1;
-
-		@media screen and (max-width: 640px) {
-			grid-column-end: content-end;
-		}
-	}
-
-	.client-header {
-		box-shadow: 0 0 30px 30px hsl(249 22% 12%);
-		background: hsl(249 22% 12% / 0.96);
-	}
-
-	swiper-slide  {
-		z-index: 1;
-		padding: 1em 1em 2.5rem 1em;
-		position: relative;
-	}
-
-	div.swiper-slide {
-		display: flex;
-	}
-
-	.glow-card::after {
-		filter: blur(0.5rem);
-	}
-
-	.glow-card::before,
-	.glow-card::after {
-		content: "";
-		position: absolute;
-		inset: -1px;
-		border-radius: 0.75rem;
-		background: conic-gradient(
-			from 0deg at 50% 50%,
-			oklch(0.624 0.201 306.747),
-			oklch(55.6% .1195 247.11),
-			oklch(0.624 0.201 306.747)
-		);
-		z-index: -1;
-	}
-
-	@keyframes fadeInUp {
-		from {
-			opacity: 0;
-		}
-
-		to {
-			opacity: 1;
-		}
-	}
-
-	.fadeInUp {
-		animation: fadeInUp 0.2s ease-in-out;
-	}
-
 </style>

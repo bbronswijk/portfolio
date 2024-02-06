@@ -1,0 +1,30 @@
+---
+const { class: className } = Astro.props;
+---
+
+<style lang="scss">
+    article {
+        &::after {
+            filter: blur(0.5rem);
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            border-radius: 0.75rem;
+            background: conic-gradient(
+                from 0deg at 50% 50%,
+                oklch(0.624 0.201 306.747),
+                oklch(55.6% .1195 247.11),
+                oklch(0.624 0.201 306.747)
+            );
+            z-index: -1;
+        }
+    }
+</style>
+
+<article class={(className || '') + " relative h-full bg-blue-50 bg-card rounded-xl"}>
+    <slot/>
+</article>

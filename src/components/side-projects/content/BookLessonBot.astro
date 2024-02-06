@@ -1,0 +1,28 @@
+---
+import nextJsImage from '../../../images/frameworks/next-js.svg';
+import prismaImage from '../../../images/frameworks/prisma.png';
+import trpcImage from '../../../images/frameworks/trpc.svg';
+import postgresImage from '../../../images/frameworks/postgresql.png';
+import playwrightImage from '../../../images/frameworks/playwright.png';
+import jestImage from '../../../images/frameworks/jest.png';
+import Project from '../Project.astro';
+import dockerImage from '../../../images/frameworks/docker.png';
+---
+
+<Project name="Book lesson bot" techStack={[
+  {src: nextJsImage.src, alt: 'Next.js'},
+  {src: prismaImage.src, alt: 'Prisma'},
+  {src: trpcImage.src, alt: 'tRPC'},
+  {src: postgresImage.src, alt: 'PostgresSql'},
+  {src: playwrightImage.src, alt: 'Playwright'},
+  {src: jestImage.src, alt: 'Jest'},
+  {src: dockerImage.src, name: 'Docker'},
+]}>
+    <p class="flex-1">
+        Ever wanted a to book a popular group lesson at the fitness centre but it was always full? I used
+        Playwright to create a bot that books the lesson for me as soon as the reservations for the lesson open.
+    </p>
+    <p class="flex-1">
+        I build a dashboard in Next.js to configure the bot and to keep track of the lessons it booked.
+    </p>
+</Project>

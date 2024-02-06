@@ -1,0 +1,31 @@
+---
+import nextJsImage from '../../../images/frameworks/next-js.svg';
+import prismaImage from '../../../images/frameworks/prisma.png';
+import trpcImage from '../../../images/frameworks/trpc.svg';
+import postgresImage from '../../../images/frameworks/postgresql.png';
+import playwrightImage from '../../../images/frameworks/playwright.png';
+import jestImage from '../../../images/frameworks/jest.png';
+import Project from '../Project.astro';
+import dockerImage from '../../../images/frameworks/docker.png';
+---
+
+<Project name="Cockpit" techStack={[
+  {src: nextJsImage.src, alt: 'Next.js'},
+  {src: prismaImage.src, alt: 'Prisma'},
+  {src: trpcImage.src, alt: 'tRPC'},
+  {src: postgresImage.src, alt: 'PostgresSql'},
+  {src: playwrightImage.src, alt: 'Playwright'},
+  {src: jestImage.src, alt: 'Jest'},
+  {src: dockerImage.src, name: 'Docker'},
+]}>
+    <p>
+        Used Next.js to create a full stack budget app to keep track of my personal finances.
+        It allows me to import my bank statements and automatically assigns them to categories, providing
+        insights in my spending habits.
+        It uses Prisma ORM to connect to a Postgres database and tRPC to create a type-safe API.
+    </p>
+    <p class="flex-1">
+        I've rebuild this dashboard a few times in the past to try out technologies like Angular, Laravel and
+        the Firebase real time database.
+    </p>
+</Project>

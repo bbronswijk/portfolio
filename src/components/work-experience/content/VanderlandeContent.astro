@@ -14,7 +14,8 @@ import Client from '../Client.astro';
 import chartJsImage from '@images/frameworks/chartjs.png';
 ---
 
-<Client id="vanderlande" prev="vanderlande" name="Vanderlande" period="March 2022 - current"
+<Client id="vanderlande" prev="vanderlande" name="Vanderlande" period="March 2022 -"
+        current={true}
         position="Senior JavaScript Developer"
         techStack={[
             {name: 'Angular', src: angularImage.src},
@@ -31,5 +32,6 @@ import chartJsImage from '@images/frameworks/chartjs.png';
             {name: 'Chart.js', src: chartJsImage.src},
         ]}>
     Fulfilled the senior frontend role within the team and coached junior developers. Worked on a process
-    mining tool for the baggage handling system of large airports.
+    mining tool for the baggage handling system of large airports. Setup micro-frontend architecture to integrate the tool as part of a larger application.
+
 </Client>

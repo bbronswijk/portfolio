@@ -1,0 +1,24 @@
+---
+import ionicImage from '../../../images/frameworks/ionic.png';
+import laravelImage from '../../../images/frameworks/laravel.png';
+import postgresImage from '../../../images/frameworks/postgresql.png';
+import Project from '../Project.astro';
+import dockerImage from '../../../images/frameworks/docker.png';
+---
+
+<Project name="TrackingTime Dashboard" techStack={[
+  {src: ionicImage.src, alt: 'Ionic'},
+  {src: laravelImage.src, alt: 'Laravel'},
+  {src: postgresImage.src, alt: 'PostgresSql'},
+  {src: dockerImage.src, name: 'Docker'},
+]}>
+    <p>
+        Always wondered what is causing your team to miss deadlines?
+        I created an Ionic dashboard and Laravel API that combined data from <i>TrackingTime</i> and our <i>Gitlab</i>
+        scrum board
+        to provide insights in the teams sprint performance.
+    </p>
+    <p class="flex-1">
+        My team at Lyceo used this everyday, improving the performance and predictability of the team.
+    </p>
+</Project>

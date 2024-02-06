@@ -1,0 +1,32 @@
+---
+import nextJsImage from '../../../images/frameworks/next-js.svg';
+import prismaImage from '../../../images/frameworks/prisma.png';
+import trpcImage from '../../../images/frameworks/trpc.svg';
+import postgresImage from '../../../images/frameworks/postgresql.png';
+import playwrightImage from '../../../images/frameworks/playwright.png';
+import jestImage from '../../../images/frameworks/jest.png';
+import Project from '../Project.astro';
+import dockerImage from '../../../images/frameworks/docker.png';
+---
+
+<Project name="Recipe scraper" techStack={[
+  {src: nextJsImage.src, alt: 'Next.js'},
+  {src: prismaImage.src, alt: 'Prisma'},
+  {src: trpcImage.src, alt: 'tRPC'},
+  {src: postgresImage.src, alt: 'PostgresSql'},
+  {src: playwrightImage.src, alt: 'Playwright'},
+  {src: jestImage.src, alt: 'Jest'},
+  {src: dockerImage.src, name: 'Docker'},
+]}>
+    <p class="flex-1">
+        Are all your favorite recipes scattered around the web? And would you like to have them all in one
+        place?
+        I used Playwright and the Bing Chat bot to create a bot that scrapes recipes from the web and adds them
+        to my recipe app.
+    </p>
+    <p class="flex-1">
+        By now I've build a few recipe apps to experiment with frameworks like Ionic, Angular and Next.js. The bot
+        make sure there is enough content to play around with.
+    </p>
+
+</Project>
