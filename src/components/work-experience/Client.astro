@@ -1,6 +1,20 @@
 ---
 import FrameworkLogo from '@components/framework-logo/FrameworkLogo.astro';
-const { id, prev, period, current, name, position, techStack } = Astro.props;
+import PassionatePeople from '@images/clients/passionatepeople.png';
+
+export interface Props {
+    id: string;
+    prev: string;
+    period: string;
+    current?: boolean;
+    name: string;
+    position?: string;
+    techStack: { src: string; name: string; }[];
+    passionatePeople?: boolean;
+}
+
+const { id, prev, period, current, name, position, techStack, passionatePeople } = Astro.props;
+import { Image } from 'astro:assets';
 ---
 
 <div class="flex flex-col gap-4">
@@ -8,12 +22,18 @@ const { id, prev, period, current, name, position, techStack } = Astro.props;
         <small class={"text-gray-200 block js-client-period" + (!!current ? ' pb-2' : '')} data-client={id} data-prev={prev}>
             {period} {current && <span class="bg-violet-800 text-white rounded-xl border-none outline-none py-1 px-3 font-bold">Now</span>}
         </small>
-        <h3 class="text-3xl font-bold">{name}</h3>
+        <h3 class="text-3xl font-bold flex items-center gap-4">
+            {name}
+            {passionatePeople && <div class="relative group cursor-pointer">
+                <span class="absolute bg-tooltip left-1/2 -translate-x-1/2 text-white text-xs rounded-xl py-1 px-4 whitespace-nowrap -top-8 opacity-0 group-hover:animate-fade z-10">
+                    Consultant at Passionate People
+                </span>
+                <Image class="object-contain" src={PassionatePeople} alt={name} height={28} width={28}/>
+            </div>}
+        </h3>
     </div>
     {position && <small class="px-4 py-1 bg-white/5 border-white/10 border rounded w-fit">{position}</small>}
     <p class="leading-relaxed"><slot /></p>
-    <!-- TODO add additional content from resume -->
-    <!--<button>Read more ^</button>-->
 
     <footer class="flex flex-wrap gap-2 mt-2">
         {(techStack || []).map((tech: { src: string; name: string; }) => (<FrameworkLogo src={tech.src} name={tech.name} />))}
