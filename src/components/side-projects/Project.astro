@@ -1,6 +1,17 @@
 ---
 import Card from '@components/card/Card.astro';
 import FrameworkLogo from '@components/framework-logo/FrameworkLogo.astro';
+
+interface Stack {
+    src: string;
+    name: string;
+}
+
+interface Props {
+    name: string;
+    techStack: Stack[];
+}
+
 const { name, techStack } = Astro.props;
 ---
 
@@ -8,6 +19,6 @@ const { name, techStack } = Astro.props;
     <h3 class="text-4xl font-bold">{name}</h3>
     <slot />
     <footer class="flex gap-2">
-        {(techStack || []).map((tech: { src: string; name: string; }) => (<FrameworkLogo src={tech.src} name={tech.name} />))}
+        {(techStack || []).map((tech: Stack) => (<FrameworkLogo src={tech.src} name={tech.name} />))}
     </footer>
 </Card>

@@ -20,10 +20,11 @@ export default {
 			},
 			colors: {
 				bg: 'hsl(249 22% 12% / <alpha-value>)',
+				tooltip: 'hsl(249 22% 6% / <alpha-value>)',
 				card: 'hsl(249 22% 20% / <alpha-value>)',
 			},
 			animation: {
-				fade: 'fadeIn .2s ease-in-out',
+				fade: 'fadeIn .2s ease-in-out forwards',
 			},
 			keyframes: {
 				fadeIn: {

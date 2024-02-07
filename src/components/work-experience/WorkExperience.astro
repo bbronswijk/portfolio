@@ -63,7 +63,10 @@ import { Image } from 'astro:assets';
 
     <div class="progress-container">
         <div class="progress"></div>
-        <Image src={avatar} alt="Avatar" class="avatar sticky h-8 w-8 min-w-8  bg-white rounded-full top-1/2 outline outline-2 outline-offset-2 outline-blue-500/50"/>
+        <div class="avatar sticky h-8 w-8 min-w-8 rounded-full top-1/2 group cursor-pointer">
+            <span class="absolute bg-tooltip text-white text-xs rounded-xl py-1 px-4 left-1/2 -translate-x-1/2 -top-8 opacity-0 group-hover:animate-fade whitespace-nowrap">Jep that's me!</span>
+            <Image src={avatar} class="rounded-full outline outline-2 outline-offset-2 outline-blue-500/50 text-shadow" alt="Jep that's me!" />
+        </div>
     </div>
 
     <div class="flex flex-col gap-40">
