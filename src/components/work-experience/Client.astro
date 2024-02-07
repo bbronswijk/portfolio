@@ -24,7 +24,7 @@ import { Image } from 'astro:assets';
         </small>
         <h3 class="text-3xl font-bold flex items-center gap-4">
             {passionatePeople && <div class="relative group cursor-pointer">
-                <span class="absolute bg-tooltip left-1/2 -translate-x-1/2 text-white text-xs rounded-xl py-1 px-4 whitespace-nowrap -top-8 opacity-0 group-hover:animate-fade z-10">
+                <span class="absolute bg-tooltip left-full md:left-1/2 translate-x-2 md:-translate-x-1/2 top-0.5 md:-top-8 text-white text-xs rounded-xl py-1 px-4 whitespace-nowrap opacity-0 group-hover:animate-fade z-10">
                     As consultant from Passionate People
                 </span>
                 <Image class="object-contain" src={PassionatePeople} alt={name} height={28} width={28}/>
