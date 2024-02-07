@@ -25,12 +25,13 @@ import colors from 'tailwindcss/colors';
 	register();
 </script>
 
-<style is:global define:vars={{ paginationColor: colors['violet']['800'] }}>
+<style is:global define:vars={{ active: colors['violet']['800'], inactive: colors['violet']['100'] }}>
 	/* https://docs.astro.build/en/reference/directives-reference/#definevars */
 	/* noinspection CssUnresolvedCustomProperty */
 	:root {
 		--padding-inline: 2rem;
 		--content-max-width: 1200px;
-		--swiper-pagination-color: var(--paginationColor);
+		--swiper-pagination-bullet-inactive-color: var(--inactive);
+		--swiper-pagination-color: var(--active);
 	}
 </style>
