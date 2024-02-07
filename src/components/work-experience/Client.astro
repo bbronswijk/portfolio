@@ -23,13 +23,14 @@ import { Image } from 'astro:assets';
             {period} {current && <span class="bg-violet-800 text-white rounded-xl border-none outline-none py-1 px-3 font-bold">Now</span>}
         </small>
         <h3 class="text-3xl font-bold flex items-center gap-4">
-            {name}
             {passionatePeople && <div class="relative group cursor-pointer">
                 <span class="absolute bg-tooltip left-1/2 -translate-x-1/2 text-white text-xs rounded-xl py-1 px-4 whitespace-nowrap -top-8 opacity-0 group-hover:animate-fade z-10">
                     Consultant at Passionate People
                 </span>
                 <Image class="object-contain" src={PassionatePeople} alt={name} height={28} width={28}/>
             </div>}
+            {name}
+
         </h3>
     </div>
     {position && <small class="px-4 py-1 bg-white/5 border-white/10 border rounded w-fit">{position}</small>}
