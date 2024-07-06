@@ -4,5 +4,5 @@ const { name, src } = Astro.props;
 
 <div class="bg-white rounded-full p-2 flex item-center justify-center relative group cursor-pointer">
     <span class="absolute bg-tooltip text-white text-xs rounded-xl py-1 px-4 -bottom-8 opacity-0 group-hover:animate-fade z-10">{name}</span>
-    <img class="object-contain" src={src} alt={name} height={20} width={20}/>
+    <img class="object-contain max-h-5" src={src} alt={name} height={20} width={20}/>
 </div>

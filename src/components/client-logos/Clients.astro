@@ -1,4 +1,5 @@
 ---
+import ANWBImage from '@images/clients/anwb.png';
 import VanderlandeImage from '@images/clients/vanderlande.svg';
 import HoogendoornImage from '@images/clients/hoogendoorn.svg';
 import LyceoImage from '@images/clients/lyceo.svg';
@@ -42,6 +43,9 @@ const breakpoints = JSON.stringify({
         autoplay-disable-on-interaction
         breakpoints={breakpoints}
         loop>
+    <swiper-slide class="flex items-center justify-center p-4">
+        <Image src={ANWBImage} class="object-contain opacity-80" height="40" alt="Logo ANWB"/>
+    </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
         <Image src={VanderlandeImage} class="object-contain opacity-80" height="30" alt="Logo vanderlande"/>
     </swiper-slide>
