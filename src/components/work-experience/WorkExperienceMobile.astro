@@ -11,6 +11,9 @@ import LetsGrowGraph from './illustrations/letsgrow/graph.astro';
 import FreelanceCard from './illustrations/freelance/card.astro';
 import Lesson from './illustrations/lyceo-fe/lesson.astro';
 import LyceoWp from './content/LyceoWpContent.astro';
+import ANWBContent from "./content/ANWBContent.astro";
+import Routeplanner from "./illustrations/anwb/routeplanner.astro";
+import Traffic from "./illustrations/anwb/bg.astro";
 ---
 <swiper-container
         class="grid md:hidden"
@@ -18,6 +21,11 @@ import LyceoWp from './content/LyceoWpContent.astro';
         pagination
         space-between="0"
         loop>
+    <swiper-slide class="pb-12">
+        <Traffic class="mb-16 ml-10"/>
+        <Routeplanner class="absolute top-10 w-60"/>
+        <ANWBContent/>
+    </swiper-slide>
     <swiper-slide class="pb-12">
         <VanderlandeGraph class="mb-8"/>
         <Vanderlande/>
