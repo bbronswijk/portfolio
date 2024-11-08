@@ -1,0 +1,5 @@
+---
+const { class: className } = Astro.props;
+---
+
+<div class={(className || '') + " flex snap-x snap-mandatory overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"}><slot/></div>

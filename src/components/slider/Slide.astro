@@ -1,0 +1,5 @@
+---
+const { class: className } = Astro.props;
+---
+
+<article class={(className || '') + " snap-center snap-always relative w-full shrink-0"}><slot/></article>

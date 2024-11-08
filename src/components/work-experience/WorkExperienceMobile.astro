@@ -14,40 +14,39 @@ import LyceoWp from './content/LyceoWpContent.astro';
 import ANWBContent from "./content/ANWBContent.astro";
 import Routeplanner from "./illustrations/anwb/routeplanner.astro";
 import Traffic from "./illustrations/anwb/bg.astro";
+import Slider from "../slider/Slider.astro"
+import Slide from "../slider/Slide.astro"
 ---
-<swiper-container
-        class="grid md:hidden"
-        slides-per-view="1"
-        pagination
-        space-between="0"
-        loop>
-    <swiper-slide class="pb-12">
+<div class="col-start-1 col-end-5 order-4">
+<Slider class="md:hidden  ">
+    <Slide class="pb-12 px-8">
         <Traffic class="mb-16 ml-10"/>
         <Routeplanner class="absolute top-10 w-60"/>
         <ANWBContent/>
-    </swiper-slide>
-    <swiper-slide class="pb-12">
+    </Slide>
+    <Slide class="pb-12 px-8">
         <VanderlandeGraph class="mb-8"/>
         <Vanderlande/>
-    </swiper-slide>
-    <swiper-slide class="pb-12">
+    </Slide>
+    <Slide class="pb-12 px-8">
         <HoogendoornRTR class="mb-8"/>
         <Hoogendoorn/>
-    </swiper-slide>
-    <swiper-slide class="pb-12">
+    </Slide>
+    <Slide class="pb-12 px-8">
         <LetsGrowGraph class="mb-8"/>
         <LetsGrow/>
-    </swiper-slide>
-    <swiper-slide class="pb-12">
-        <Lesson  class="mb-8"/>
+    </Slide>
+    <Slide class="pb-12 px-8">
+        <Lesson class="mb-8"/>
         <LyceoFe/>
-    </swiper-slide>
-    <swiper-slide class="pb-12">
+    </Slide>
+    <Slide class="pb-12 px-8">
         <LyceoRow class="mb-8"/>
         <LyceoWp/>
-    </swiper-slide>
-    <swiper-slide class="pb-12">
+    </Slide>
+    <Slide class="pb-12 px-8">
         <FreelanceCard class="mb-8"/>
         <Freelance/>
-    </swiper-slide>
-</swiper-container>
+    </Slide>
+</Slider>
+</div>

@@ -2,16 +2,18 @@
 import Anna from './Anna.astro';
 import Hilda from './Hilda.astro';
 import Melike from './Melike.astro';
+import Slider from "../slider/Slider.astro";
+import Slide from "../slider/Slide.astro";
 ---
 
-<swiper-container class="grid md:hidden" slides-per-view="1" pagination space-between="0" loop>
-    <swiper-slide class="pt-4 px-8 md:px-4 pb-12">
+<Slider class="md:hidden">
+    <Slide class="pt-4 px-8 pb-12">
         <Anna/>
-    </swiper-slide>
-    <swiper-slide class="pt-4 px-8 md:px-4 pb-12">
+    </Slide>
+    <Slide class="pt-4 px-8 pb-12">
         <Hilda/>
-    </swiper-slide>
-    <swiper-slide class="pt-4 px-8 md:px-4 pb-12">
+    </Slide>
+    <Slide class="pt-4 px-8 pb-12">
         <Melike/>
-    </swiper-slide>
-</swiper-container>
+    </Slide>
+</Slider>
