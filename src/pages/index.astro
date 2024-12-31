@@ -21,26 +21,32 @@ import ResumeButton from '@components/resume/ResumeButton.astro';
 <Layout>
     <Header/>
 
-    <main class="order-3 col-start-2 col-end-4 grid gap-y-14 py-14">
+    <main class="order-3 col-start-1 col-end-5 grid py-24">
         <Clients/>
-        <h2 class="text-5xl font-bold text-center text-shadow">Work experience</h2>
+    </main>
+
+    <main class="order-3 col-start-2 col-end-4 grid gap-y-20 py-14">
+        <h2 class="text-5xl md:text-8xl font-bold text-center text-shadow">Work experience</h2>
         <WorkExperience />
     </main>
+
     <WorkExperienceMobile/>
 
     <main class="order-5 grid gap-y-14 py-60 col-start-1 md:col-start-2 col-end-5">
         <SideProjects/>
     </main>
 
-    <main class="order-6 col-start-1 col-end-5 md:col-start-2 md:col-end-4 grid gap-y-14 py-14">
-        <h2 class="text-6xl font-bold text-center text-shadow testimonials-header">Skills</h2>
+    <main class="order-6 col-start-1 col-end-5 md:col-start-1 md:col-end-5 grid gap-y-14 py-14 mb-40">
+        <h2 class="text-6xl md:text-9xl font-bold text-center text-shadow testimonials-header">Skills</h2>
         <Skills/>
+    </main>
 
-        <h2 class="text-6xl font-bold text-center text-shadow testimonials-header">What my clients say</h2>
+    <main class="order-6 col-start-1 col-end-5 md:col-start-2 md:col-end-4 grid gap-y-20 py-14">
+        <h2 class="text-6xl md:text-9xl font-bold text-center text-shadow testimonials-header">What my clients say</h2>
         <Testimonials/>
         <MobileTestimonials/>
 
-        <h2 class="text-6xl font-bold text-center mt-60 text-shadow">Download my resume</h2>
+        <h2 class="text-6xl md:text-9xl font-bold text-center mt-60 text-shadow">View my resume</h2>
         <ResumeButton class="m-auto mb-40"/>
     </main>
 </Layout>

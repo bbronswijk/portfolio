@@ -25,12 +25,18 @@ import irisImage from '@images/clients/iris.svg';
 import { Image } from 'astro:assets';
 
 const breakpoints = JSON.stringify({
-  640: {
-    slidesPerView: 3,
-  },
-  1024: {
-    slidesPerView: 4,
-  },
+    640: {
+        slidesPerView: 3,
+    },
+    1024: {
+        slidesPerView: 4,
+    },
+    1400: {
+        slidesPerView: 6,
+    },
+    2000: {
+        slidesPerView: 7,
+    },
 });
 ---
 
@@ -44,67 +50,67 @@ const breakpoints = JSON.stringify({
         breakpoints={breakpoints}
         loop>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={ANWBImage} class="object-contain opacity-80" height="40" alt="Logo ANWB"/>
+        <Image src={ANWBImage} class="object-contain" height="40" alt="Logo ANWB"/>
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={VanderlandeImage} class="object-contain opacity-80" height="30" alt="Logo vanderlande"/>
+        <Image src={VanderlandeImage} class="object-contain " height="30" alt="Logo vanderlande"/>
     </swiper-slide>
     <swiper-slide class="grayscale flex items-center justify-center p-4">
-        <Image src={LyceoImage} class="object-contain opacity-80" height="30" alt="Logo Lyceo" />
+        <Image src={LyceoImage} class="object-contain " height="30" alt="Logo Lyceo" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={HoogendoornImage} class="object-contain opacity-80" height="30" alt="Logo Hoogendoorn" />
+        <Image src={HoogendoornImage} class="object-contain " height="30" alt="Logo Hoogendoorn" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={RTLXLImage} class="object-contain opacity-80" height="30" alt="Logo RTLXL" />
+        <Image src={RTLXLImage} class="object-contain " height="30" alt="Logo RTLXL" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={LetsGrow} class="object-contain opacity-80" height="55" alt="Logo LetsGrow.com" />
+        <Image src={LetsGrow} class="object-contain " height="55" alt="Logo LetsGrow.com" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={otisInsights} class="object-contain opacity-80" height="40" alt="Logo OtisInsights" />
+        <Image src={otisInsights} class="object-contain " height="40" alt="Logo OtisInsights" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={LagaImage} class="object-contain opacity-80" height="30" alt="Logo Laga" />
+        <Image src={LagaImage} class="object-contain " height="30" alt="Logo Laga" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={OrasImage} class="object-contain opacity-80" height="25" alt="Logo ORAS" />
+        <Image src={OrasImage} class="object-contain " height="25" alt="Logo ORAS" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={inspiringInsightsImage} class="object-contain opacity-80" height="50" alt="Logo Inspiring Insights" />
+        <Image src={inspiringInsightsImage} class="object-contain " height="50" alt="Logo Inspiring Insights" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={rowCoachingImage} class="object-contain opacity-80" height="40" alt="Logo RowCoaching" />
+        <Image src={rowCoachingImage} class="object-contain " height="40" alt="Logo RowCoaching" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={vrpImage} class="object-contain opacity-80" height="60" alt="Logo vrp architecten" />
+        <Image src={vrpImage} class="object-contain " height="60" alt="Logo vrp architecten" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={AuthoriteitIncasso} class="object-contain opacity-80" height="50" alt="Logo Authoriteit Incasso" />
+        <Image src={AuthoriteitIncasso} class="object-contain " height="50" alt="Logo Authoriteit Incasso" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={proteusImage} class="opacity-80" height="30" alt="Logo proteus eretes" />
+        <Image src={proteusImage} class="" height="30" alt="Logo proteus eretes" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={ashtoniaImage} class="object-contain opacity-80" height="25" alt="Logo ashtonia" />
+        <Image src={ashtoniaImage} class="object-contain " height="25" alt="Logo ashtonia" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={prezzenceImage} class="object-contain opacity-80" height="40" alt="Logo prezzence" />
+        <Image src={prezzenceImage} class="object-contain " height="40" alt="Logo prezzence" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={orangeClogImage} class="object-contain opacity-80" height="40" alt="Logo OrangeClog" />
+        <Image src={orangeClogImage} class="object-contain " height="40" alt="Logo OrangeClog" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={FourteenDayzImage} class="object-contain opacity-80" height="40" alt="Logo 14dayz" />
+        <Image src={FourteenDayzImage} class="object-contain " height="40" alt="Logo 14dayz" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={juristenCollectiefImage} class="object-contain opacity-80" height="60" alt="Logo Juristen collectief" />
+        <Image src={juristenCollectiefImage} class="object-contain " height="60" alt="Logo Juristen collectief" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={enVinkeImage} class="object-contain opacity-80" height="30" alt="Logo enVinke" />
+        <Image src={enVinkeImage} class="object-contain " height="30" alt="Logo enVinke" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
-        <Image src={irisImage} class="object-contain opacity-80" height="40" alt="Logo powered by Iris" />
+        <Image src={irisImage} class="object-contain " height="40" alt="Logo powered by Iris" />
     </swiper-slide>
     <swiper-slide class="flex items-center justify-center p-4">
         <Image src={hollandsVenetieInsights} class="object-contain" height="50" alt="Logo Hollands Venentie" />

@@ -7,7 +7,7 @@ import Card from '@components/card/Card.astro';
 
 <picture class="order-none md:order-1 mt-4 md:mt-0 col-start-2 md:col-start-3 col-span-2 md:col-span-2 md:min-h-[540px] object-fill flex justify-center">
     <source media="(min-width: 768px)" srcset={ProfileImage.src}/>
-    <img class="rounded-full md:rounded-none h-60 w-60 md:h-auto md:w-auto object-cover md:h-full -z-10"
+    <img class="rounded-full md:rounded-none h-60 w-60 md:h-auto md:w-auto object-cover -z-10"
          src={ProfileMobileImage.src}
          height="700px"
          alt="Profile picture of Bram Bronswijk"
@@ -16,8 +16,8 @@ import Card from '@components/card/Card.astro';
 
 <section class="order-1 md:order-none flex flex-col align-start justify-center h-full col-start-2 col-span-2 md:col-start-2 md:col-span-1 py-4">
     <span class="text-3xl md:text-5xl -ml-1 text-shadow">Hi, I am</span>
-    <p class="text-6xl md:text-9xl font-bold -ml-2 text-shadow">Bram</p>
-    <p class="max-w-96 text-shadow">
+    <p class="text-6xl md:text-9xl font-bold -ml-2 mb-2 text-shadow">Bram</p>
+    <p class="max-w-96 text-shadow md:text-2xl">
         A full-stack developer with a passion for frontend development and UI design.
     </p>
     <ResumeButton class="self-start my-4 md:my-8"/>
@@ -33,7 +33,7 @@ import Card from '@components/card/Card.astro';
         <div class="text-2xl leading-6">Side<br/>projects</div>
     </div>
     <div class="flex gap-2">
-        <div class="text-5xl">5</div>
-        <div class="text-2xl leading-6">NPM<br/>Packages</div>
+        <div class="text-5xl">10</div>
+        <div class="text-2xl leading-6">Years<br/>experience</div>
     </div>
 </Card>
